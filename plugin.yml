@@ -8,6 +8,9 @@ commands:
      aliases: [deaths,d]
      permission: hs.deathsee
      permission-message: You must hava hs.deathsee permission to see your deaths
+   src:
+     description: See the source code!
+     aliases: [sourcecode,sc]
 permissions:
   hs.ignore:
     default: op

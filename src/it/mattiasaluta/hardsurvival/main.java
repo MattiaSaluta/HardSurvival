@@ -5,7 +5,6 @@ import java.util.HashMap;
 
 import org.bukkit.BanList;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.command.Command;
@@ -27,6 +26,11 @@ import org.bukkit.event.inventory.PrepareItemCraftEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import net.md_5.bungee.api.ChatColor;
+import net.md_5.bungee.api.chat.ClickEvent;
+import net.md_5.bungee.api.chat.ComponentBuilder;
+import net.md_5.bungee.api.chat.TextComponent;
 
 public class main extends JavaPlugin implements Listener{
     private DestroyTools d = new DestroyTools();
@@ -66,6 +70,13 @@ public class main extends JavaPlugin implements Listener{
                 }
                 return true;
             }
+            }
+            if(cmd.getName().equalsIgnoreCase("src")){
+            	TextComponent message = new TextComponent( "Source Code" );
+            	message.setBold(true);
+            	message.setColor(ChatColor.DARK_GREEN);
+            	message.setClickEvent( new ClickEvent( ClickEvent.Action.OPEN_URL, "https://github.com/MattiaSaluta/HardSurvivalPlugin/" ) );
+            	((Player)sender).spigot().sendMessage(message);
             }
         }
 		return false;
