@@ -1,0 +1,19 @@
+name: HardSurvival
+version: 0.1.0
+main: it.mattiasaluta.hardsurvival.main
+author: MattiaSaluta
+commands:
+   death:
+     description: See your deaths!
+     aliases: [deaths,d]
+     permission: hs.deathsee
+     permission-message: You must hava hs.deathsee permission to see your deaths
+permissions:
+  hs.ignore:
+    default: op
+    description: Ignore BreakEvents
+  hs.deathsee:
+    default: true
+    description: See your Deaths
+
+
